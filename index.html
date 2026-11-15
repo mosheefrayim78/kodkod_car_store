@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDrive | סוכנות רכב אונליין</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🚗 Auto<span>Drive</span></div>
+        <div class="cart-badge">פריטים בעגלה: <span id="cartCount">0</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>הרכב הבא שלך במרחק קליק</h1>
+        <p>מבחר רכבי יוקרה, חשמליות, משפחתיות ו-SUV באספקה מיידית</p>
+    </section>
+
+    <main class="container">
+        <!-- כפתורי סינון לפי קטגוריה -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCars('all', this)">הכל (9)</button>
+            <button class="filter-btn" onclick="filterCars('electric', this)">חשמליות</button>
+            <button class="filter-btn" onclick="filterCars('suv', this)">ג'יפונים (SUV)</button>
+            <button class="filter-btn" onclick="filterCars('sport', this)">ספורט ויוקרה</button>
+            <button class="filter-btn" onclick="filterCars('family', this)">משפחתיות</button>
+        </div>
+
+        <!-- רשת המכוניות -->
+        <div class="cars-grid" id="carsGrid"></div>
+
+        <!-- עגלת קניות -->
+        <section class="cart-box">
+            <h2>🛒 עגלת ההזמנות שלך</h2>
+            <ul id="cartList">
+                <li class="empty-msg">העגלה ריקה כרגע. בחר רכב מהקטלוג למעלה!</li>
+            </ul>
+            <div class="cart-summary">
+                <p class="total">סה"כ לתשלום: <span id="totalPrice">₪0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
