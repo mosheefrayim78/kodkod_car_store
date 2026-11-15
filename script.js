@@ -74,3 +74,7 @@ function addToCart(carId) {
         renderCart();
     }
 }
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    renderCart();
+}
