@@ -65,3 +65,12 @@ function renderCart() {
 }
 
 renderCars();
+
+// פונקציית הוספה לסל - משה
+function addToCart(carId) {
+    const selectedCar = carsData.find(car => car.id === carId);
+    if (selectedCar) {
+        cart.push(selectedCar);
+        renderCart();
+    }
+}
